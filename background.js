@@ -1,12 +1,8 @@
-// chrome.browserAction.onClicked.addListener((tab) => {
-//   chrome.tabs.executeScript(tab.ib, { file: 'index.js' });
-// });
-
 window.listStorage = {};
-chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+chrome.runtime.onMessage.addListener((request) => {
   window.listStorage[request.url] = request;
 });
 
-chrome.browserAction.onClicked.addListener(function (tab) {
+chrome.browserAction.onClicked.addListener(() => {
   chrome.tabs.create({ url: 'popup.html' });
 });
