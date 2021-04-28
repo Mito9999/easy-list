@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "Easy List",
+  "version": "1.0",
+  "description": "Create a list of Wikipedia items with a click",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_title": "Easy List"
+  },
+  "permissions": ["activeTab"]
+}
